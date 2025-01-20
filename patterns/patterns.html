@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patterns</title>
+    <style>
+      body {
+        background-color: #330000;
+        color: white;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        gap: 2rem;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+      .pattern {
+        height: 20rem;
+        width: 15rem;
+        border: 2px solid white;
+        /* padding: 1rem; */
+        font-size: 2rem;
+        border-radius: 15px;
+        line-height: 0.8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .pattern:hover {
+        background-color: white;
+        color: black;
+      }
+      .pattern h2 {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Patterns</h1>
+    <div class="container">
+      <div class="row">
+        <div class="pattern">
+          <h2>Triangle pattern 1</h2>
+          <script>
+            {
+              let rows = 5;
+              let cols = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Triangle pattern 2</h2>
+          <script>
+            {
+              let rows = 5;
+              let cols = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Triangle pattern 3</h2>
+          <script>
+            {
+              let rows = 5;
+              let i, j, k;
+              for (i = 1; i <= rows; i++) {
+                for (k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp");
+                }
+                for (j = 1; j <= i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Triangle pattern 4</h2>
+          <script>
+            {
+              let rows = 5;
+              let i, j, k;
+              for (i = rows; i >= 1; i--) {
+                for (k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp");
+                }
+                for (j = 1; j <= i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let rows = 5;
+              let i, j, k, l;
+              for (i = 1; i <= rows; i++) {
+                for (k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (j = 1; j <= i; j++) {
+                  document.write("*");
+                }
+                for (l = 2; l <= i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="pattern">
+        <h2>Pyramid</h2>
+        <script>
+          {
+            let rows = 5;
+            let m = 1;
+            for (let i = 1; i <= rows; i++) {
+              for (let k = 1; k <= 5 - i; k++) {
+                document.write("&nbsp;&nbsp");
+              }
+              for (let j = 1; j <= m; j++) {
+                document.write("*");
+              }
+              document.write("<br/>");
+              m = m + 2;
+            }
+          }
+        </script>
+      </div> -->
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let rows = 5;
+              m = 9;
+              for (i = 1; i <= rows; i++) {
+                for (let k = 2; k <= i; k++) {
+                  document.write("&nbsp;&nbsp");
+                }
+                for (let j = 1; j <= m; j++) {
+                  document.write("*");
+                }
+
+                document.write("<br/>");
+                m = m - 2;
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 5 - i; j++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 1; k <= i; k++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+              let r = 5;
+              for (let i = r - 1; i >= 1; i--) {
+                for (let j = 1; j <= 5 - i; j++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 1; k <= i; k++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let r = 5;
+              for (let i = r; i >= 1; i--) {
+                for (let j = 1; j <= 5 - i; j++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 1; k <= i; k++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 5 - i; j++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 1; k <= i; k++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let rows = 5,
+                m = 1;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 2; k <= m; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+                m = m + 1;
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Pyramid</h2>
+          <script>
+            {
+              let rows = 5,
+                m = 1;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                for (let l = 2; l <= i; l++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let k = 2; k <= m; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+                m = m + 1;
+              }
+              let r = 5;
+              let m1 = 8;
+              for (let i = rows; i >= 1; i--) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write("*");
+                }
+                for (let k = 1; k <= m1; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let l = 1; l <= 6 - i; l++) {
+                  document.write("*");
+                }
+                document.write("<br/>");
+                m1 = m1 - 2;
+              }
+            }
+          </script>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pattern">
+          <h2>Number Triangle Pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                  document.write(i);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write(i);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                  document.write(j);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= 6 - i; j++) {
+                  document.write(j);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                  document.write(i);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                  document.write(j);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = rows; i >= 1; i--) {
+                for (let k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                  document.write(i);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <div class="pattern">
+          <h2>Number Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let k = 1; k <= 5 - i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                  document.write(j);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div>
+        <!-- <div class="pattern">
+          <h2>Pyramid Triangle pattern</h2>
+          <script>
+            {
+              let rows = 5;
+              for (let i = 1; i <= rows; i++) {
+                for (let k = 1; k <= i; k++) {
+                  document.write("&nbsp;&nbsp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                  document.write(i);
+                }
+                document.write("<br/>");
+              }
+            }
+          </script>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>

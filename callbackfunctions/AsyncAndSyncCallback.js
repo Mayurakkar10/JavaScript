@@ -11,7 +11,6 @@
 
 
 //asynchronous callback
-
 console.log("start");
 function foo(){
    setTimeout(function(){
